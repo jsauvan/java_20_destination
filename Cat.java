@@ -1,4 +1,6 @@
-// Another concrete class extending abstract class
+
+
+```java
 public class Cat extends Animal {
     public Cat(String name) {
         super(name);
@@ -9,3 +11,4 @@ public class Cat extends Animal {
         System.out.println(getName() + " says: Meow!");
     }
 }
+```

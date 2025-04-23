@@ -1,3 +1,5 @@
+
+
 import java.util.List;
 
 // Main class to demonstrate polymorphism and abstraction
@@ -9,5 +11,29 @@ public class AbstractExample {
         for (var animal : animals) {
             animal.makeSound();
         }
+    }
+}
+
+class Dog {
+    private String name;
+
+    public Dog(String name) {
+        this.name = name;
+    }
+
+    public void makeSound() {
+        System.out.println("Woof!");
+    }
+}
+
+class Cat {
+    private String name;
+
+    public Cat(String name) {
+        this.name = name;
+    }
+
+    public void makeSound() {
+        System.out.println("Meow!");
     }
 }

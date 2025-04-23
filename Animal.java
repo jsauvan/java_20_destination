@@ -1,4 +1,6 @@
-// Abstract class
+
+
+```java
 public abstract class Animal {
     private String name;
 
@@ -10,6 +12,6 @@ public abstract class Animal {
         return name;
     }
 
-    // Abstract method to be implemented by subclasses
     public abstract void makeSound();
 }
+```
