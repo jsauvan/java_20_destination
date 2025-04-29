@@ -25,3 +25,6 @@ replay_pid*
 
 # lyn
 *.txt
+
+# env
+java_env_setter.sh
