@@ -1,24 +1,33 @@
+
+
+```java
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 public class Client {
     public static void main(String[] args) {
         try {
-            // Set security manager if needed
             if (System.getSecurityManager() == null) {
                 System.setSecurityManager(new SecurityManager());
             }
             
-            // Look up the remote object
-            Registry registry = LocateRegistry.getRegistry("localhost", 1099);
-            Hello stub = (Hello) registry.lookup("Hello");
+            var registry = LocateRegistry.getRegistry("localhost", 1099);
+            var stub = (Hello) registry.lookup("Hello");
             
-            // Call the remote method
-            String response = stub.sayHello();
-            System.out.println("Response: " + response);
+            if (stub != null) {
+                var response = stub.sayHello();
+                if (response != null) {
+                    System.out.println("Response: " + response);
+                } else {
+                    System.out.println("Response is null");
+                }
+            } else {
+                System.out.println("Stub is null");
+            }
         } catch (Exception e) {
             System.err.println("Client exception: " + e.toString());
             e.printStackTrace();
         }
     }
 }
+```

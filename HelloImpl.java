@@ -1,3 +1,6 @@
+
+
+```java
 import java.rmi.RemoteException;
 import java.rmi.MarshalledObject;
 import java.rmi.activation.Activatable;
@@ -33,3 +36,4 @@ public class HelloImpl extends Activatable implements Hello {
         }
     }
 }
+```
